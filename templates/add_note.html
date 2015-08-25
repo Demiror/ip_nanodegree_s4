@@ -2,8 +2,7 @@
 {% block content %}
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 drop-shadow">
-					
+		<div class="col-md-8 drop-shadow">		
 			<form action="/submit_note?notebook_name={{ notebook_name }}" method="post">
 				<div>
 					Concept Title:<br>
@@ -15,6 +14,11 @@
 					<input type="submit" value="Add Note">
 				</div>
 			</form>
+			{% if note_error == "True" %}
+				<div class="error" style="color:red">
+					You cannot leave a blanks content fields in your notes.
+				</div>
+			{% endif %}
 		</div>
 		<div class="col-md-3 drop-shadow">
 			<form>Notebook name:<br>

@@ -15,6 +15,11 @@
 						<input name="key" type="hidden" value="{{ note.key.urlsafe() }}">
 						<div><input type="submit" value="Comment"></div>
 					</form>
+					{% if comment_error == note.key.urlsafe() %}
+						<div class="error" style="color:red">
+							You cannot leave a blank comment.
+						</div>
+					{% endif %}
 					<hr>
 					{% for comment in note.comments %}
 						{% if comment.author %}
