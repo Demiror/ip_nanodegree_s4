@@ -1,0 +1,37 @@
+body {
+	background-color: #EFEFEF;
+}
+
+.drop-shadow {
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+	margin: 15px;
+	padding: 5px 20px;
+	background-color: #fff;
+}
+
+.easter-egg a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: #333333;
+}
+
+/* unvisited link */
+a:link {
+    color: #000;
+}
+
+/* visited link */
+a:visited {
+    color: #000;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
